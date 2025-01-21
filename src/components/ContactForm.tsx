@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { toast } from 'react-hot-toast';
 
 interface FormData {
@@ -17,30 +17,61 @@ export default function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    // Handle the response from Google Apps Script
+    const handleMessage = (event: MessageEvent) => {
+      if (event.origin === window.location.origin) {
+        try {
+          const data = JSON.parse(event.data);
+          if (data.status === 'success') {
+            setIsSubmitted(true);
+            setFormData({ name: '', email: '', phone: '' });
+            toast.success('Thank you for your message. We will get back to you soon!');
+          } else {
+            toast.error('Failed to submit form. Please try again.');
+          }
+        } catch (error) {
+          console.error('Error parsing response:', error);
+          toast.error('Failed to submit form. Please try again.');
+        }
+        setIsSubmitting(false);
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      await fetch(process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL!, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-        }),
+      // Create a hidden form and submit it within an iframe
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL!;
+      form.target = 'hidden-iframe';
+
+      // Add form fields
+      Object.entries(formData).forEach(([key, value]) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = value;
+        form.appendChild(input);
       });
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', phone: '' });
-      toast.success('Thank you for your message. We will get back to you soon!');
+
+      // Add the form to the document and submit it
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
     } catch (error) {
       console.error('Error submitting form:', error);
       toast.error('Failed to submit form. Please try again.');
-    } finally {
       setIsSubmitting(false);
     }
   };
@@ -52,8 +83,14 @@ export default function ContactForm() {
 
   return (
     <div className="animate-fade-in-up bg-zinc-900/90 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-zinc-800 shadow-xl">
+      <iframe
+        ref={iframeRef}
+        name="hidden-iframe"
+        style={{ display: 'none' }}
+        title="Hidden iframe for form submission"
+      />
       {!isSubmitted ? (
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-1">
               Name
