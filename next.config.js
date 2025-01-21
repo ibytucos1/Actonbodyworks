@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',  // Enable static exports
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: true,  // Required for static export
     domains: ['actonbodywork.vercel.app'],
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -15,20 +16,6 @@ const nextConfig = {
   },
   experimental: {
     optimizeCss: true,
-  },
-  headers: async () => {
-    return [
-      {
-        source: '/:all*(svg|jpg|png)',
-        locale: false,
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, must-revalidate',
-          }
-        ],
-      },
-    ]
   },
 }
 
