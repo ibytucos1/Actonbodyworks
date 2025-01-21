@@ -171,8 +171,8 @@ export default function Home() {
                 <div 
                   key={`dup-${num}`} 
                   className="flex-shrink-0 w-[140px] h-[70px] relative grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
-                >
-                  <Image
+          >
+            <Image
                     src={`/images/logo-${num}.png`}
                     alt={`Trusted Company ${num}`}
                     fill
@@ -337,8 +337,8 @@ export default function Home() {
                     className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white text-red-600 font-semibold hover:bg-red-50 transition-colors"
                   >
                     Call Now: 07476 753022
-                  </a>
-                  <a
+          </a>
+          <a
                     href="#"
                     className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-black/20 text-white font-semibold hover:bg-black/30 transition-colors"
                   >
@@ -359,7 +359,7 @@ export default function Home() {
             <div>
               <div className="mb-6">
                 <Link href="/" className="inline-block hover:opacity-80 transition-opacity">
-                  <Image
+          <Image
                     src="/images/sitelogo.png"
                     alt="Acton Bodyworks"
                     width={200}
@@ -372,8 +372,8 @@ export default function Home() {
                 <p>Professional auto body repairs and services in London&apos;s premier auto repair shop.</p>
                 <a 
                   href="https://maps.app.goo.gl/gpcJfT4WyCuH8XYt6" 
-                  target="_blank"
-                  rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
                   className="block hover:text-white transition-colors"
                 >
                   219 Horn Ln, London W3 9ED

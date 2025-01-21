@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 
 interface FormData {
   name: string;
@@ -10,6 +11,7 @@ interface FormData {
 }
 
 export default function ContactForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -23,30 +25,25 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // Convert form data to URL-encoded format
-      const formBody = new URLSearchParams();
-      Object.entries(formData).forEach(([key, value]) => {
-        formBody.append(key, value);
-      });
+      const params = new URLSearchParams();
+      params.append('name', formData.name);
+      params.append('email', formData.email);
+      params.append('phone', formData.phone);
 
-      const response = await fetch(process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL!, {
+      const response = await fetch(process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL || '', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: formBody,
-        mode: 'no-cors' // This is important for Google Apps Script
+        body: params,
+        mode: 'no-cors',
       });
 
-      // Since we're using no-cors, we won't get a proper response
-      // So we'll assume success if no error was thrown
-      setIsSubmitted(true);
+      setIsSubmitting(false);
       setFormData({ name: '', email: '', phone: '' });
-      toast.success('Thank you for your message. We will get back to you soon!');
+      
+      // Redirect to thank you page
+      router.push('/thank-you');
     } catch (error) {
       console.error('Error submitting form:', error);
       toast.error('Failed to submit form. Please try again.');
-    } finally {
       setIsSubmitting(false);
     }
   };
