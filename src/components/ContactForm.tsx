@@ -7,6 +7,7 @@ interface FormData {
   name: string;
   email: string;
   phone: string;
+  message: string;
 }
 
 export default function ContactForm() {
@@ -14,24 +15,18 @@ export default function ContactForm() {
     name: '',
     email: '',
     phone: '',
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const SHEET_URL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
-      
-      if (!SHEET_URL) {
-        throw new Error('Google Sheets URL not configured');
-      }
-
-      const response = await fetch(SHEET_URL, {
+      await fetch(process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL!, {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -39,23 +34,20 @@ export default function ContactForm() {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
-          timestamp: new Date().toISOString()
         }),
       });
-
       setIsSubmitted(true);
-      setFormData({ name: '', email: '', phone: '' });
+      setFormData({ name: '', email: '', phone: '', message: '' });
       toast.success('Thank you for your message. We will get back to you soon!');
-      
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('Error submitting form:', error);
       toast.error('Failed to submit form. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -109,6 +101,20 @@ export default function ContactForm() {
               placeholder="Enter your phone number"
             />
           </div>
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-zinc-300 mb-1">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+              placeholder="Enter your message"
+            />
+          </div>
           <button
             type="submit"
             disabled={isSubmitting}
@@ -133,7 +139,7 @@ export default function ContactForm() {
             />
           </svg>
           <p className="text-lg font-medium text-white">Thank you!</p>
-          <p className="text-sm text-zinc-300">We'll get back to you soon.</p>
+          <p className="text-sm text-zinc-300">We&apos;ll get back to you soon.</p>
         </div>
       )}
     </div>

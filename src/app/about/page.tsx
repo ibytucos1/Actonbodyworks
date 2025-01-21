@@ -29,7 +29,7 @@ export default function AboutPage() {
                   Since 2004, Acton Bodyworks has been providing exceptional auto body repair services to the London community. What started as a small repair shop has grown into a trusted name in the industry.
                 </p>
                 <p>
-                  Our commitment to quality workmanship, attention to detail, and customer satisfaction has earned us a reputation as one of London's premier auto body repair facilities.
+                  We&apos;re committed to providing exceptional results with attention to every detail.
                 </p>
                 <p>
                   We continuously invest in the latest technology and training to ensure we provide the highest quality repairs possible. Our team of certified technicians brings decades of combined experience to every project.
@@ -103,7 +103,7 @@ export default function AboutPage() {
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Work With Us?</h2>
                 <p className="text-lg text-red-50 mb-8">
-                  Experience the difference of working with London's trusted auto body repair specialists.
+                  Experience the difference of working with London&apos;s trusted auto body repair specialists.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 

@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import SocialLinks from "@/components/SocialLinks";
 
@@ -13,7 +11,7 @@ export default function ContactPage() {
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">Contact Us</h1>
             <p className="text-lg sm:text-xl text-zinc-300 max-w-3xl mx-auto">
-              Get in touch with London's trusted auto body repair specialists
+              Get in touch with London&apos;s trusted auto body repair specialists
             </p>
           </div>
         </div>

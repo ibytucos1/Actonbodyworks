@@ -171,7 +171,7 @@ export default function ServicesPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Body Work</h2>
               <div className="space-y-4 text-zinc-300">
                 <p>
-                  Our body work services restore your vehicle's appearance and structural integrity. From minor dents to major repairs, we ensure quality results.
+                  Our body work services restore your vehicle&apos;s appearance and structural integrity. From minor dents to major repairs, we ensure quality results.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
