@@ -9,9 +9,9 @@ import SocialShare from "@/components/SocialShare";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Acton Bodyworks - Professional Auto Body Repairs in London",
-  description: "Expert vehicle crash repairs and bodywork services with over 20 years of experience in London. Specializing in collision repair, paint services, and bodywork.",
-  keywords: "auto body repair, car repair london, collision repair, paint services, bodywork, car maintenance, vehicle repair, auto repair shop london, acton bodyworks",
+  title: "Acton Bodyworks - Professional Car & Auto Body Repair in London",
+  description: "Expert car accident repair services in Acton, London. Specializing in car body repair, dent removal, vehicle collision repair, and professional car respray. Over 20 years of experience in auto body repairs.",
+  keywords: "London car repair, Acton car repair, Accident repair in London, Car body repair in Acton, Auto body repair in London, Acton body repair services, London auto body repair, Car repair near Acton, Accident car repair London, Car dent repair in Acton, Vehicle body repair London, Auto repair Acton, Acton accident repair services, London crash repair, Car scratch repair London, Acton vehicle repair shop, Car panel repair in London, London vehicle bodywork, Auto body services in Acton, Car repair experts in London, Affordable car repair Acton, Car respray in Acton, Professional body repair London, Acton auto body shop, London collision repair, Car frame repair London, London bumper repair, Acton vehicle collision repair, Car paint repair in London",
   authors: [{ name: "Acton Bodyworks" }],
   creator: "Acton Bodyworks",
   publisher: "Acton Bodyworks",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Acton Bodyworks - Professional Auto Body Repairs in London',
-    description: 'Expert vehicle crash repairs and bodywork services with over 20 years of experience in London. Specializing in collision repair, paint services, and bodywork.',
+    title: 'Acton Bodyworks - Leading Car Body Repair Shop in London',
+    description: 'Premier auto body repair services in Acton, London. Expert car accident repairs, professional vehicle bodywork, collision repair, and car respray services. Trusted by London drivers for over 20 years.',
     url: 'https://actonbodywork.vercel.app',
     siteName: 'Acton Bodyworks',
     locale: 'en_GB',
@@ -47,14 +47,14 @@ export const metadata: Metadata = {
         url: '/images/sitelogo.png',
         width: 350,
         height: 117,
-        alt: 'Acton Bodyworks Logo',
+        alt: 'Acton Bodyworks - Professional Car Body Repair Shop in London',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Acton Bodyworks - Professional Auto Body Repairs in London',
-    description: 'Expert vehicle crash repairs and bodywork services with over 20 years of experience in London. Specializing in collision repair, paint services, and bodywork.',
+    title: 'Acton Bodyworks - Expert Car Body Repairs in London',
+    description: 'Professional auto body repair services in Acton. Specializing in accident repairs, car dent removal, vehicle collision repair, and expert car respray services.',
     images: ['/images/sitelogo.png'],
     creator: '@actonbodyworks',
     site: '@actonbodyworks',
@@ -88,34 +88,44 @@ export default function RootLayout({
               "@type": "AutoRepairShop",
               "name": "Acton Bodyworks",
               "image": "https://actonbodywork.vercel.app/images/sitelogo.png",
-              "description": "Expert vehicle crash repairs and bodywork services with over 20 years of experience in London. Specializing in collision repair, paint services, and bodywork.",
+              "description": "Expert car and vehicle repair services in Acton, London. Specializing in accident repairs, car body work, collision repair, dent removal, and professional car respray services.",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Your Street Address",
+                "streetAddress": "219 Horn Ln",
                 "addressLocality": "London",
-                "postalCode": "Your Postal Code",
+                "postalCode": "W3 9ED",
                 "addressCountry": "GB"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": "YOUR_LATITUDE",
-                "longitude": "YOUR_LONGITUDE"
+                "latitude": "51.5151130",
+                "longitude": "-0.2690847"
               },
               "url": "https://actonbodywork.vercel.app",
-              "telephone": "YOUR_PHONE",
+              "telephone": "07476753022",
               "openingHoursSpecification": [
                 {
                   "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
                   "opens": "09:00",
                   "closes": "18:00"
                 }
               ],
               "priceRange": "££",
-              "servesCuisine": "Auto Repair Services",
+              "areaServed": ["Acton", "London", "West London"],
+              "serviceType": [
+                "Car Body Repair",
+                "Accident Repair",
+                "Vehicle Collision Repair",
+                "Car Dent Repair",
+                "Auto Paint Services",
+                "Car Respray",
+                "Bumper Repair",
+                "Panel Repair"
+              ],
               "sameAs": [
                 "https://www.instagram.com/actonbodyworks/",
-                "YOUR_SOCIAL_MEDIA_LINKS"
+                "https://wa.me/447476753022"
               ]
             })
           }}
