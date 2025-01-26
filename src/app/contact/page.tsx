@@ -10,8 +10,8 @@ export default function ContactPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">Contact Us</h1>
-            <p className="text-lg sm:text-xl text-zinc-300 max-w-3xl mx-auto">
-              Get in touch with London&apos;s trusted auto body repair specialists
+            <p className="text-lg sm:text-xl text-zinc-100 font-medium max-w-3xl mx-auto">
+              Get in touch with London's trusted auto body repair specialists
             </p>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">Connect With Us</h2>
                 <div className="space-y-4">
-                  <p className="text-zinc-300">
+                  <p className="text-lg sm:text-xl text-zinc-100 font-medium">
                     Follow us on social media for updates, tips, and to see our latest work.
                   </p>
                   <SocialLinks />

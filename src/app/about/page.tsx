@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">About Us</h1>
-            <p className="text-lg sm:text-xl text-zinc-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-zinc-100 font-medium max-w-3xl mx-auto">
               Professional auto body repairs and services by certified experts
             </p>
           </div>
@@ -55,7 +55,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Our Values</h2>
-            <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-zinc-100 font-medium max-w-2xl mx-auto">
               The principles that guide our work and relationships
             </p>
           </div>

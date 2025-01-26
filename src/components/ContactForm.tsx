@@ -57,12 +57,12 @@ export default function ContactForm() {
     <div className="animate-fade-in-up bg-zinc-900/90 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-zinc-800 shadow-xl">
       {!isSubmitted ? (
         <>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 text-center">
-            Get Your Free Estimate Today
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center leading-tight px-4">
+            Get Your <span className="text-red-500 inline-block animate-pulse-scale">FREE</span> Estimate<br className="hidden sm:block" /> & Save 20% Today!
           </h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-1">
+              <label htmlFor="name" className="block text-xl font-medium text-zinc-300 mb-2">
                 Name
               </label>
               <input
@@ -72,12 +72,12 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors text-lg"
                 placeholder="Enter your name"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-1">
+              <label htmlFor="email" className="block text-xl font-medium text-zinc-300 mb-2">
                 Email
               </label>
               <input
@@ -87,12 +87,12 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors text-lg"
                 placeholder="Enter your email"
               />
             </div>
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-zinc-300 mb-1">
+              <label htmlFor="phone" className="block text-xl font-medium text-zinc-300 mb-2">
                 Phone
               </label>
               <input
@@ -102,7 +102,7 @@ export default function ContactForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors text-lg"
                 placeholder="Enter your phone number"
               />
             </div>

@@ -2,12 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import SocialLinks from "@/components/SocialLinks";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen">
+      <section className="relative min-h-screen pt-32 pb-20 sm:pt-40 sm:pb-24">
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/50 z-10" />
         <Image
           src="/images/pexels-radu-daniel-mrd-1938968-7391656.jpg"
@@ -17,7 +18,7 @@ export default function Home() {
           priority
           quality={100}
         />
-        <div className="relative z-20 h-full flex flex-col justify-center pt-32 sm:pt-40">
+        <div className="relative z-20 h-full flex flex-col justify-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Hero Content */}
@@ -66,39 +67,39 @@ export default function Home() {
       <section className="py-16 sm:py-20 bg-zinc-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Why Choose Acton Bodyworks</h2>
-            <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-              We deliver excellence in every repair, with a team of certified professionals and satisfied customers
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Why Choose Us</h2>
+            <p className="text-lg sm:text-xl text-zinc-100 max-w-2xl mx-auto font-medium">
+              Experience excellence in auto body repairs with our expert team
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Years in Business */}
             <div className="bg-zinc-800/50 backdrop-blur-sm p-6 rounded-2xl text-center">
               <div className="text-4xl font-bold text-red-500 mb-2">100%</div>
               <div className="text-white font-semibold mb-2">Certified</div>
-              <p className="text-zinc-400 text-sm">Professional auto repair services by qualified experts</p>
+              <p className="text-white text-sm">Professional auto repair services by qualified experts</p>
             </div>
 
             {/* Completed Projects */}
             <div className="bg-zinc-800/50 backdrop-blur-sm p-6 rounded-2xl text-center">
               <div className="text-4xl font-bold text-red-500 mb-2">5000+</div>
               <div className="text-white font-semibold mb-2">Repairs Completed</div>
-              <p className="text-zinc-400 text-sm">Successfully restored vehicles to their pre-accident condition</p>
+              <p className="text-white text-sm">Successfully restored vehicles to their pre-accident condition</p>
             </div>
 
             {/* Expert Team */}
             <div className="bg-zinc-800/50 backdrop-blur-sm p-6 rounded-2xl text-center">
               <div className="text-4xl font-bold text-red-500 mb-2">100%</div>
               <div className="text-white font-semibold mb-2">Certified Team</div>
-              <p className="text-zinc-400 text-sm">A team of qualified professionals delivering expert auto repairs</p>
+              <p className="text-white text-sm">A team of qualified professionals delivering expert auto repairs</p>
             </div>
 
             {/* Customer Satisfaction */}
             <div className="bg-zinc-800/50 backdrop-blur-sm p-6 rounded-2xl text-center">
               <div className="text-4xl font-bold text-red-500 mb-2">98%</div>
               <div className="text-white font-semibold mb-2">Customer Satisfaction</div>
-              <p className="text-zinc-400 text-sm">Consistently rated 5 stars by our satisfied customers</p>
+              <p className="text-white text-sm">Consistently rated 5 stars by our satisfied customers</p>
             </div>
           </div>
 
@@ -171,8 +172,8 @@ export default function Home() {
                 <div 
                   key={`dup-${num}`} 
                   className="flex-shrink-0 w-[140px] h-[70px] relative grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
-          >
-            <Image
+                >
+                  <Image
                     src={`/images/logo-${num}.png`}
                     alt={`Trusted Company ${num}`}
                     fill
@@ -190,8 +191,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-              Professional auto repair services tailored to your needs
+            <p className="text-lg sm:text-xl text-zinc-100 max-w-2xl mx-auto font-medium">
+              Professional auto body repair services for all makes and models
             </p>
           </div>
           
@@ -207,7 +208,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Collision Repair</h3>
-              <p className="text-zinc-400 mb-4">Expert repair for vehicles involved in collisions, restoring them to pre-accident condition.</p>
+              <p className="text-white mb-4">Expert repair for vehicles involved in collisions, restoring them to pre-accident condition.</p>
               <span className="text-red-500 font-medium hover:text-red-400 inline-flex items-center gap-2">
                 Learn More
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -227,7 +228,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Paint Services</h3>
-              <p className="text-zinc-400 mb-4">Professional paint services with precise color matching and flawless finish.</p>
+              <p className="text-white mb-4">Professional paint services with precise color matching and flawless finish.</p>
               <span className="text-red-500 font-medium hover:text-red-400 inline-flex items-center gap-2">
                 Learn More
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -248,7 +249,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Mechanical Repairs</h3>
-              <p className="text-zinc-400 mb-4">Comprehensive mechanical repairs using state-of-the-art equipment and expert technicians.</p>
+              <p className="text-white mb-4">Comprehensive mechanical repairs using state-of-the-art equipment and expert technicians.</p>
               <span className="text-red-500 font-medium hover:text-red-400 inline-flex items-center gap-2">
                 Learn More
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -268,7 +269,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Body Work</h3>
-              <p className="text-zinc-400 mb-4">Expert body work repairs to restore your vehicle&apos;s appearance and structural integrity.</p>
+              <p className="text-white mb-4">Expert body work repairs to restore your vehicle&apos;s appearance and structural integrity.</p>
               <span className="text-red-500 font-medium hover:text-red-400 inline-flex items-center gap-2">
                 Learn More
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -288,7 +289,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Diagnostics</h3>
-              <p className="text-zinc-400 mb-4">Advanced diagnostic services to identify and resolve vehicle issues accurately.</p>
+              <p className="text-white mb-4">Advanced diagnostic services to identify and resolve vehicle issues accurately.</p>
               <span className="text-red-500 font-medium hover:text-red-400 inline-flex items-center gap-2">
                 Learn More
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -308,7 +309,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Custom Work</h3>
-              <p className="text-zinc-400 mb-4">Specialized custom work to enhance your vehicle&apos;s performance and appearance.</p>
+              <p className="text-white mb-4">Specialized custom work to enhance your vehicle&apos;s performance and appearance.</p>
               <span className="text-red-500 font-medium hover:text-red-400 inline-flex items-center gap-2">
                 Learn More
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -337,8 +338,8 @@ export default function Home() {
                     className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white text-red-600 font-semibold hover:bg-red-50 transition-colors"
                   >
                     Call Now: 07476 753022
-          </a>
-          <a
+                  </a>
+                  <a
                     href="#"
                     className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-black/20 text-white font-semibold hover:bg-black/30 transition-colors"
                   >
@@ -359,7 +360,7 @@ export default function Home() {
             <div>
               <div className="mb-6">
                 <Link href="/" className="inline-block hover:opacity-80 transition-opacity">
-          <Image
+                  <Image
                     src="/images/sitelogo.png"
                     alt="Acton Bodyworks"
                     width={200}
@@ -372,8 +373,8 @@ export default function Home() {
                 <p>Professional auto body repairs and services in London&apos;s premier auto repair shop.</p>
                 <a 
                   href="https://maps.app.goo.gl/gpcJfT4WyCuH8XYt6" 
-          target="_blank"
-          rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block hover:text-white transition-colors"
                 >
                   219 Horn Ln, London W3 9ED
