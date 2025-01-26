@@ -8,7 +8,7 @@ export default function SocialShare() {
 
   const shareData = {
     title: 'Acton Bodyworks - Professional Auto Body Repairs in London',
-    text: 'Expert vehicle crash repairs and bodywork services with over 20 years of experience in London.',
+    text: 'Expert vehicle crash repairs and bodywork services by certified professionals in London.',
     url: currentUrl,
   };
 

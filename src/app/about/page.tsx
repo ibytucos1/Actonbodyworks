@@ -12,7 +12,7 @@ export default function AboutPage() {
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">About Us</h1>
             <p className="text-lg sm:text-xl text-zinc-300 max-w-3xl mx-auto">
-              Over 20 years of excellence in auto body repairs and services
+              Professional auto body repairs and services by certified experts
             </p>
           </div>
         </div>
@@ -26,13 +26,13 @@ export default function AboutPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Our Story</h2>
               <div className="space-y-4 text-zinc-300">
                 <p>
-                  Since 2004, Acton Bodyworks has been providing exceptional auto body repair services to the London community. What started as a small repair shop has grown into a trusted name in the industry.
+                  Acton Bodyworks is a trusted name in the London community, providing exceptional auto body repair services. Our commitment to quality and customer satisfaction has made us a reliable choice for vehicle repairs.
                 </p>
                 <p>
                   We&apos;re committed to providing exceptional results with attention to every detail.
                 </p>
                 <p>
-                  We continuously invest in the latest technology and training to ensure we provide the highest quality repairs possible. Our team of certified technicians brings decades of combined experience to every project.
+                  We continuously invest in the latest technology and training to ensure we provide the highest quality repairs possible. Our team of certified technicians brings extensive expertise to every project.
                 </p>
               </div>
             </div>

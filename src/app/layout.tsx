@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Acton Bodyworks - Professional Car & Auto Body Repair in London",
-  description: "Expert car accident repair services in Acton, London. Specializing in car body repair, dent removal, vehicle collision repair, and professional car respray. Over 20 years of experience in auto body repairs.",
+  description: "Expert car accident repair services in Acton, London. Specializing in car body repair, dent removal, vehicle collision repair, and professional car respray. Certified team of auto repair professionals.",
   keywords: "London car repair, Acton car repair, Accident repair in London, Car body repair in Acton, Auto body repair in London, Acton body repair services, London auto body repair, Car repair near Acton, Accident car repair London, Car dent repair in Acton, Vehicle body repair London, Auto repair Acton, Acton accident repair services, London crash repair, Car scratch repair London, Acton vehicle repair shop, Car panel repair in London, London vehicle bodywork, Auto body services in Acton, Car repair experts in London, Affordable car repair Acton, Car respray in Acton, Professional body repair London, Acton auto body shop, London collision repair, Car frame repair London, London bumper repair, Acton vehicle collision repair, Car paint repair in London",
   authors: [{ name: "Acton Bodyworks" }],
   creator: "Acton Bodyworks",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Acton Bodyworks - Leading Car Body Repair Shop in London',
-    description: 'Premier auto body repair services in Acton, London. Expert car accident repairs, professional vehicle bodywork, collision repair, and car respray services. Trusted by London drivers for over 20 years.',
+    description: 'Premier auto body repair services in Acton, London. Expert car accident repairs, professional vehicle bodywork, collision repair, and car respray services by certified technicians.',
     url: 'https://actonbodywork.vercel.app',
     siteName: 'Acton Bodyworks',
     locale: 'en_GB',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Acton Bodyworks - Expert Car Body Repairs in London',
-    description: 'Professional auto body repair services in Acton. Specializing in accident repairs, car dent removal, vehicle collision repair, and expert car respray services.',
+    description: 'Professional auto body repair services in Acton. Specializing in accident repairs, car dent removal, vehicle collision repair, and expert car respray services by qualified technicians.',
     images: ['/images/sitelogo.png'],
     creator: '@actonbodyworks',
     site: '@actonbodyworks',
@@ -73,10 +73,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any" />
-        <link rel="mask-icon" href="/images/favicon.svg" color="#000000" />
-        <link rel="apple-touch-icon" href="/images/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="theme-color" content="#000000" />
@@ -150,7 +149,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black`}>
         <Header />
         <main>
-          {children}
+        {children}
         </main>
         <SocialShare />
         <Toaster position="bottom-right" />

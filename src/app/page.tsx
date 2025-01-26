@@ -30,8 +30,8 @@ export default function Home() {
                   Comprehensive Vehicle Repairs & Premium Service
                 </h1>
                 <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90">
-                  We have been providing our clients with expert vehicle crash repairs and
-                  bodywork services for over 20 years.
+                  We have a qualified team of professionals providing expert vehicle crash repairs and
+                  bodywork services.
                 </p>
                 <div className="space-y-3 sm:space-y-4 mb-8 lg:mb-0">
                   <div className="flex items-center gap-3">
@@ -44,7 +44,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 sm:w-6 sm:h-6 bg-red-600 rounded-full flex items-center justify-center text-sm">✓</div>
-                    <span className="text-sm sm:text-base">20+ Years Experience</span>
+                    <span className="text-sm sm:text-base">Certified Technicians</span>
                   </div>
                 </div>
                 {/* Mobile Contact Form */}
@@ -68,16 +68,16 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Why Choose Acton Bodyworks</h2>
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-              We deliver excellence in every repair, backed by years of experience and satisfied customers
+              We deliver excellence in every repair, with a team of certified professionals and satisfied customers
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Years in Business */}
             <div className="bg-zinc-800/50 backdrop-blur-sm p-6 rounded-2xl text-center">
-              <div className="text-4xl font-bold text-red-500 mb-2">20+</div>
-              <div className="text-white font-semibold mb-2">Years Experience</div>
-              <p className="text-zinc-400 text-sm">Serving our community with expert auto repairs since 2004</p>
+              <div className="text-4xl font-bold text-red-500 mb-2">100%</div>
+              <div className="text-white font-semibold mb-2">Certified</div>
+              <p className="text-zinc-400 text-sm">Professional auto repair services by qualified experts</p>
             </div>
 
             {/* Completed Projects */}
@@ -91,7 +91,7 @@ export default function Home() {
             <div className="bg-zinc-800/50 backdrop-blur-sm p-6 rounded-2xl text-center">
               <div className="text-4xl font-bold text-red-500 mb-2">100%</div>
               <div className="text-white font-semibold mb-2">Certified Team</div>
-              <p className="text-zinc-400 text-sm">Fully qualified technicians with ongoing training</p>
+              <p className="text-zinc-400 text-sm">A team of qualified professionals delivering expert auto repairs</p>
             </div>
 
             {/* Customer Satisfaction */}
